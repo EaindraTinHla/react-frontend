@@ -6,7 +6,7 @@ const useFetch = () =>{
 const [loader,setLoader] = useState(true);
 const [quiz,setQuiz] = useState([]);
     useEffect(()=>{
-    axios.get('https://react-quiz.onrender.com/').then((res)=>{
+    axios.get('https://localhost:5000/api/quiz').then((res)=>{
         const data = res.data;
         setQuiz(data);
         setLoader(false);
